@@ -2,7 +2,7 @@
 # NOTE: THIS DOCKERFILE IS GENERATED VIA "apply-templates.sh"
 #
 # PLEASE DO NOT EDIT IT DIRECTLY.
-# To Late
+#
 
 FROM php:8.1-apache
 
