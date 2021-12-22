@@ -28,6 +28,8 @@ RUN set -ex; \
 		libpng-dev \
 		libwebp-dev \
 		libzip-dev \
+		libldap2-dev\
+		
 	; \
 	\
 	docker-php-ext-configure gd \
@@ -35,13 +37,18 @@ RUN set -ex; \
 		--with-jpeg \
 		--with-webp \
 	; \
+	docker-php-ext-configure ldap \
+	--with-libdir=lib/x86_64-linux-gnu/ \
+	;\
 	docker-php-ext-install -j "$(nproc)" \
 		bcmath \
 		exif \
 		gd \
 		mysqli \
 		zip \
+		ldap\
 	; \
+	
 # https://pecl.php.net/package/imagick
 	pecl install imagick-3.6.0; \
 	docker-php-ext-enable imagick; \
