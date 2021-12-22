@@ -57,7 +57,6 @@ RUN set -ex; \
 		hash \
 		iconv \
 		imap \
-		interbase \
 		intl \
 		json \
 		ldap \
