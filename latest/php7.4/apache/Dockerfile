@@ -61,7 +61,6 @@ RUN set -ex; \
 		json \
 		ldap \
 		mbstring \
-		mcrypt \
 		mysqli \
 		oci8 \
 		odbc \
